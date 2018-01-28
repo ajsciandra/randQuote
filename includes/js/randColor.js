@@ -8,5 +8,7 @@ function getRandColor(){
 }
 
 function setRandomColor(){
-  $(".wholePg").css("background-color", getRandColor());
+  var color = getRandColor();
+  $(".wholePg").css("background-color", color);
+  $(".qt").css("color", color);
 }

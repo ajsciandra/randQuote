@@ -9,12 +9,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src = "includes/js/randColor.js"></script>
+  <script src = "includes/js/quote.js"></script>
 
 </head>
 <body class = "wholePg">
-  <div class = "container-fluid quote-hold">
-    <img src = "includes/photos/quotations.png" class = "quotes">
-    <button class = "btn btn-primary wholePg" onclick = "setRandomColor()">New Quote</button>
+  <h2 style= "text-align:center">Inspirational Quotes for the Day!</h2>
+  <div class = "container quote-hold">
+    <h4 class = "qt" id = "quote"> Nothing is impossible, the word itself says “I’m possible”! <br/>-Audrey Hepburn</h4>
+    <button class = "btn btn-primary wholePg" id = "newQuote" onclick = "setRandomColor(); newQuote()"><strong>New Quote</strong></button>
 
   </div>
 
