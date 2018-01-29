@@ -53,7 +53,17 @@ var quotes = [
 
 function newQuote(){
 
-  var num = Math.floor(Math.random() * quotes.length);
-  $("#quote").html(quotes[num]);
+  num = Math.floor(Math.random() * quotes.length);
+  quote = quotes[num];
+  $("#quote").html(quote);
 
 }
+
+$(document).ready(function(){
+  $('#tweet-btn').click(function (e){
+    var textToTweet = quote;
+    var twtLink = 'http://twitter.com/home?status=' +encodeURIComponent(textToTweet);
+    window.open(twtLink,'_blank');
+
+  });
+});

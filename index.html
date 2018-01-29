@@ -3,6 +3,7 @@
 <head>
   <title> Random Quote Generator </title>
   <meta charset="utf-8">
+  <link rel="shortcut icon" href="">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="includes/css/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -13,11 +14,13 @@
 
 </head>
 <body class = "wholePg">
-  <h2 style= "text-align:center">Inspirational Quotes for the Day!</h2>
+  <h2 style= "text-align:center" id= "title">Inspirational Quotes for the Day!</h2>
   <div class = "container quote-hold">
     <h4 class = "qt" id = "quote"> Nothing is impossible, the word itself says “I’m possible”! <br/>-Audrey Hepburn</h4>
-    <button class = "btn btn-primary wholePg" id = "newQuote" onclick = "setRandomColor(); newQuote()"><strong>New Quote</strong></button>
-
+    <div>
+    <button class = "btn btn-primary wholePg new" id = "newQuote" onclick = "setRandomColor(); newQuote()"><strong>New Quote</strong></button>
+    <button class = "btn wholePg twt" id = "tweet-btn"><strong>Tweet This!</strong></button>
+    </div>
   </div>
 
 
