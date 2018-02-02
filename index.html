@@ -1,29 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title> Random Quote Generator </title>
-  <meta charset="utf-8">
-  <link rel="shortcut icon" href="">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="includes/css/index.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src = "includes/js/randColor.js"></script>
-  <script src = "includes/js/quote.js"></script>
-
+ <title>
+ </title>
+ <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.5.1.js">
+</script>
+ <script type="text/javascript">
+ $(document).ready(function () {
+ $('#btnTweet').click(function (e) {
+ alert('hello11');
+ var textToTweet = "Hi I am tweeting from here";
+ if (textToTweet.length > 140) {
+ alert('Tweet should be less than 140 Chars');
+ }
+ else {
+ var twtLink = 'http://twitter.com/home?status=' +encodeURIComponent(textToTweet);
+ window.open(twtLink,'_blank');
+ }
+ });
+ });
+ 
+</script>
+ <style type="text/css">
+ #btnTweet {
+ width: 159px;
+ height: 38px;
+ }
+ </style>
 </head>
-<body class = "wholePg">
-  <h2 style= "text-align:center" id= "title">Inspirational Quotes for the Day!</h2>
-  <div class = "container quote-hold">
-    <h4 class = "qt" id = "quote"> Nothing is impossible, the word itself says “I’m possible”! <br/>-Audrey Hepburn</h4>
-    <div>
-    <button class = "btn btn-primary wholePg new" id = "newQuote" onclick = "setRandomColor(); newQuote()"><strong>New Quote</strong></button>
-    <button class = "btn wholePg twt" id = "tweet-btn"><strong>Tweet This!</strong></button>
-    </div>
-  </div>
-
-
-
-</body>
+ <body>
+ <h1>tweet from debugmode</h1>
+ <button id="btnTweet">Tweet</button>
+ </body>
 </html>
+
